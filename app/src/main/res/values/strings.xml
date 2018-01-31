@@ -1,5 +1,11 @@
 <resources>
     <string name="app_name">second_app</string>
     <string name="edit_message">Enter a message</string>
-    <string name="button_send">Send</string>
+    <string name="button_send">send</string>
+    <string name="enter">Your total is 0</string>
+    <string name="bSub">Subtract 1</string>
+    <string name="bAdd">Add 1</string>
+    <string name="tvDisplay">Place value</string>
+    <string name="bBack">Back</string>
+    <string name="bTot">Price</string>
 </resources>

@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.joe.second_app.Fries"
+    >
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/tvDisplay"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/enter"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <Button
+        android:id="@+id/bAdd"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvDisplay"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        android:text="@string/bAdd"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="45dp" />
+    <Button
+        android:id="@+id/bSub"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bAdd"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        android:text="@string/bSub"
+        tools:layout_editor_absoluteX="252dp"
+        tools:layout_editor_absoluteY="48dp" />
+
+</RelativeLayout>
