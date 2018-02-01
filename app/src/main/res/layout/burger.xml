@@ -9,34 +9,38 @@
 
     <TextView
         android:id="@+id/tvDisplay"
-        android:layout_width="300dp"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text="@string/enter"
-        android:textSize="20dp"
-        tools:layout_editor_absoluteX="8dp" />
+        android:layout_alignLeft="true"
+        android:text="@string/burger"
+        android:textSize="31dp"
+        android:layout_marginTop="50dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="45dp"/>
 
     <Button
         android:id="@+id/bTot"
-        android:layout_width="300dp"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tvDisplay"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/bBack"
+        android:layout_toRightOf="@+id/bBack"
         android:text="@string/bAdd"
-        tools:layout_editor_absoluteX="0dp"
+        android:layout_marginTop="50dp"
+        tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="45dp" />
         <!--android:layout_alignLeft="@+id/tvDisplay"
         android:layout_alignStart="@+id/tvDisplay" -->
 
     <Button
         android:id="@+id/bBack"
-        android:layout_width="300dp"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/bTot"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="20dp"
+        android:layout_alignBottom="@+id/bTot"
+        android:layout_toEndOf="@+id/tvDisplay"
+        android:layout_toRightOf="@+id/tvDisplay"
         android:text="@string/bSub"
-        tools:layout_editor_absoluteX="252dp"
-        tools:layout_editor_absoluteY="48dp" />
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="45dp" />
+    <!-- -->
 </RelativeLayout>
