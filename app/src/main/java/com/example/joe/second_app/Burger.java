@@ -19,7 +19,7 @@ import java.io.OutputStream;
  */
 
 
-/// left on trying to write to file. 
+/// left on trying to write to file.
 public class Burger extends Activity implements View.OnClickListener {
 
 
@@ -174,12 +174,12 @@ public class Burger extends Activity implements View.OnClickListener {
                 counter = counter > 99 ? counter: 1;
                 inputForFile = (EditText) findViewById(R.id.output_name);
                 FileOutputStream outputStream;
-                try {
+                try { //code in here may have problems keeps crashing. 
 
                     String customer_name = inputForFile.getText().toString();
-                    String customer_order = "Order #"
+                    String customer_order = "Order #" + counter + "/nTotal: " + totalCost;
                     outputStream = openFileOutput(myfile, Context.MODE_PRIVATE);
-                    outputStream.write()
+                    outputStream.write(customer_order.getBytes());
                     outputStream.write(customer_name.getBytes());
                     outputStream.close();
 
