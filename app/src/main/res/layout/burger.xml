@@ -6,15 +6,211 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.joe.second_app.Burger">
 
+    <!-- BURGER-->
+    <TextView
+        android:id="@+id/burgerDisplay"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="@string/burger"
+        android:textSize="31dp"
+        android:layout_marginTop="50dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="45dp"/>
 
+   <EditText
+       android:layout_width="100dp"
+       android:layout_height="wrap_content"
+       android:id="@+id/addBurger"
+       android:hint="@string/command"
+       android:layout_marginTop="50dp"
+       android:layout_marginLeft="100dp"
+
+       />
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/subBurger"
+        android:hint="@string/command"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="200dp"
+
+        />
+
+    <Button
+        android:id="@+id/burger"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/burger"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="45dp" />
+
+
+
+    <!-- CHICKEN-->
+    <TextView
+        android:id="@+id/chickenDisplay"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="@string/chicken"
+        android:textSize="31dp"
+        android:layout_marginTop="150dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="45dp"/>
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/addChicken"
+        android:hint="@string/command"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="100dp"
+
+        />
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/subChicken"
+        android:hint="@string/command"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="200dp"
+
+        />
+
+    <Button
+        android:id="@+id/chicken"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="150dp"
+        android:text="@string/chicken"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="45dp" />
+
+
+    <!-- FRIES-->
+    <TextView
+        android:id="@+id/friesDisplay"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="@string/fries"
+        android:textSize="31dp"
+        android:layout_marginTop="250dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="45dp"/>
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/addFries"
+        android:hint="@string/command"
+        android:layout_marginTop="250dp"
+        android:layout_marginLeft="100dp"
+
+        />
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/subFries"
+        android:hint="@string/command"
+        android:layout_marginTop="250dp"
+        android:layout_marginLeft="200dp"
+
+        />
+
+    <Button
+        android:id="@+id/fries"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="250dp"
+        android:text="@string/fries"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="45dp" />
+
+<!-- output to file-->
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/output_name"
+        android:hint="@string/command"
+        android:layout_marginTop="450dp"
+        android:layout_marginLeft="200dp"
+
+        />
+
+    <Button
+        android:id="@+id/output"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="450dp"
+        android:text="@string/output"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="45dp" />
+    <!-- Final Total Cost-->
+    <TextView
+        android:id="@+id/addResult"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="@string/burger"
+        android:textSize="31dp"
+        android:layout_marginTop="350dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="45dp"/>
+
+    <!-- chicken-->
+    <!--
+    <TextView
+        android:id="@+id/chickenDisplay"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+
+        android:text="@string/chicken"
+        android:textSize="31dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="0dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="45dp"/>
+
+
+
+    <Button
+        android:id="@+id/chickenPrice"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="150dp"
+        android:text="@string/chicken"
+
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="45dp" />
+    android:layout_alignLeft="@+id/tvDisplay"
+    android:layout_alignStart="@+id/tvDisplay" -->
+    <!--
+
+    <Button
+        android:id="@+id/chicken"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="150dp"
+
+        android:text="@string/chicken"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="45dp" />
+
+
+   FRIES-->
+    <!--
     <TextView
         android:id="@+id/tvDisplay"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="true"
-        android:text="@string/burger"
+        android:text="@string/fries"
         android:textSize="31dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="250dp"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="45dp"/>
 
@@ -25,12 +221,13 @@
         android:layout_alignParentTop="true"
         android:layout_toEndOf="@+id/bBack"
         android:layout_toRightOf="@+id/bBack"
-        android:text="@string/bAdd"
-        android:layout_marginTop="50dp"
+        android:text="@string/fries"
+        android:layout_marginTop="250dp"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="45dp" />
-        <!--android:layout_alignLeft="@+id/tvDisplay"
-        android:layout_alignStart="@+id/tvDisplay" -->
+     android:layout_alignLeft="@+id/tvDisplay"
+    android:layout_alignStart="@+id/tvDisplay" -->
+    <!--
 
     <Button
         android:id="@+id/bBack"
@@ -39,8 +236,10 @@
         android:layout_alignBottom="@+id/bTot"
         android:layout_toEndOf="@+id/tvDisplay"
         android:layout_toRightOf="@+id/tvDisplay"
-        android:text="@string/bSub"
+        android:text="@string/fries"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="45dp" />
-    <!-- -->
+
+
+     -->
 </RelativeLayout>

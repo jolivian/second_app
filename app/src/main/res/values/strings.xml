@@ -3,10 +3,24 @@
     <string name="edit_message">Enter a message</string>
     <string name="button_send">send</string>
     <string name="enter">Your total is 0</string>
-    <string name="burger">Burger</string>
     <string name="bSub">Subtract 1</string>
     <string name="bAdd">Add 1</string>
     <string name="tvDisplay">Place value</string>
     <string name="bBack">Back</string>
     <string name="bTot">Price</string>
+    <string name="output">output</string>
+    <string name="command">command</string>
+
+    <string name="friesDisplay">fries</string>
+    <string name="fries">fries</string>
+    <string name="friesPrice">fries</string>
+
+
+    <string name="chickenDisplay">chicken</string>
+    <string name="chicken">chicken</string>
+    <string name="chickenPrice">chicken</string>
+
+    <string name="burgerDisplay">burger</string>
+    <string name="burger">burger</string>
+    <string name="burgerPrice">burger</string>
 </resources>
