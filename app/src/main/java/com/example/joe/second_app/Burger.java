@@ -2,9 +2,11 @@ package com.example.joe.second_app;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.InputType;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,6 +15,8 @@ import android.widget.TextView;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * Created by Joe on 1/30/2018.
@@ -23,18 +27,18 @@ import java.io.OutputStream;
 public class Burger extends Activity implements View.OnClickListener {
 
 
-    int burgerCounter,chickenCounter,friesCounter, counter = 0;
+    int burgerCounter = 0,chickenCounter = 0,friesCounter = 0, counter = 0;
     int valAddBurger,valAddChicken,valAddFries;
     int valSubBurger,valSubChicken,valSubFries;
     String emptyString = "", myfile = "output_file";
     double totalCost, burgerPrice =1.99, chickenPrice =1.5, friesPrice = 0.99;
-    Button burgerTotal,chickenTotal,friesTotal;
+    Button burgerTotal,chickenTotal,friesTotal, sendEmail;
     EditText inputAddBurger,inputAddChicken,inputAddFries;
     EditText inputSubBurger,inputSubChicken,inputSubFries;
     EditText inputForFile;
     TextView bDisplay,cDisplay, fDisplay, result;
     private Context context;
-    File file = new File(context.getFilesDir(),myfile);
+    //File file = new File(context.getFilesDir(),myfile);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +49,7 @@ public class Burger extends Activity implements View.OnClickListener {
         chickenTotal.setOnClickListener(this);
         friesTotal = (Button) findViewById(R.id.fries);
         friesTotal.setOnClickListener(this);
+        final Button send = (Button) this.findViewById(R.id.output);
     }
     //burger total
     @Override
@@ -96,7 +101,7 @@ public class Burger extends Activity implements View.OnClickListener {
 
             case R.id.chicken:
         //chicken total
-        chickenCounter = 0;
+        //chickenCounter = 0;
         //counter++;
         //counter = counter > 99 ? counter: 0;
 
@@ -111,19 +116,11 @@ public class Burger extends Activity implements View.OnClickListener {
                     inputSubChicken.setInputType(InputType.TYPE_CLASS_NUMBER);
                     valAddChicken = Integer.parseInt(inputAddChicken.getText().toString());
                     valSubChicken = Integer.parseInt(inputSubChicken.getText().toString());
-                    chickenCounter = valAddChicken - valSubChicken;
+                    chickenCounter = chickenCounter + valAddChicken - valSubChicken;
 
-
-                    totalCost = totalCost + (chickenCounter * chickenPrice);
-                    if (totalCost > 0) {
-                        result.setText("Your total is " + totalCost);
-                    }
-                    else
-                    {
-                        totalCost = 0;
-                        result.setText("Your total is " + totalCost);
-
-                    }
+                    chickenCounter = chickenCounter > 0 ? chickenCounter:0;
+                    totalCost = (chickenCounter * chickenPrice) + (burgerCounter* burgerPrice) + (friesCounter*friesPrice);
+                    result.setText("Your total is " + totalCost);
 
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -136,7 +133,7 @@ public class Burger extends Activity implements View.OnClickListener {
 
             case R.id.fries:
         //fries total
-        friesCounter = 0;
+        //friesCounter = 0;
         //counter++;
         //counter = counter > 99 ? counter: 0;
 
@@ -154,13 +151,14 @@ public class Burger extends Activity implements View.OnClickListener {
                     friesCounter = valAddFries - valSubFries;
 
 
-                    totalCost = totalCost + (friesCounter * friesPrice);
-                    if (totalCost > 0) {
+                    if (friesCounter > 0) {
+                        totalCost = (chickenCounter * chickenPrice) + (burgerCounter* burgerPrice) + (friesCounter*friesPrice);
                         result.setText("Your total is " + totalCost);
                     }
                     else
                     {
-                        totalCost = 0;
+                        friesCounter = 0;
+                        totalCost = (chickenCounter * chickenPrice) + (burgerCounter* burgerPrice) + (friesCounter*friesPrice);
                         result.setText("Your total is " + totalCost);
 
                     }
@@ -172,16 +170,42 @@ public class Burger extends Activity implements View.OnClickListener {
             case R.id.output:
                 counter++;
                 counter = counter > 99 ? counter: 1;
-                inputForFile = (EditText) findViewById(R.id.output_name);
-                FileOutputStream outputStream;
-                try { //code in here may have problems keeps crashing. 
+                //inputForFile = (EditText) findViewById(R.id.output_name);
+                //FileOutputStream outputStream;
+                Log.i("Send email", "");
 
+                /*String[] TO = {"someone@gmail.com"};
+                String[] CC = {"xyz@gmail.com"};
+                Intent emailIntent = new Intent(Intent.ACTION_SEND);
+                emailIntent.setData(Uri.parse("mailto:"));
+                emailIntent.setType("text/plain");
+
+
+                emailIntent.putExtra(Intent.EXTRA_EMAIL, TO);
+                emailIntent.putExtra(Intent.EXTRA_CC, CC);
+                emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Your subject");
+                emailIntent.putExtra(Intent.EXTRA_TEXT, "Email message goes here"); */
+                Log.i("SendMailActivity", "Send Button Clicked.");
+
+                String fromEmail = "joeamp7@gmail.com";
+                String fromPassword = "";
+                String toEmails = "joeampuero@gmail.com";
+                List toEmailList = Arrays.asList(toEmails
+                        .split("\\s*,\\s*"));
+                Log.i("SendMailActivity", "To List: " + toEmailList);
+                String emailSubject = "Test";
+                String emailBody = "Test";
+                new SendMailTask(Burger.this).execute(fromEmail,
+                        fromPassword, toEmailList, emailSubject, emailBody);
+
+                try { //code in here may have problems keeps crashing.
+                    /*
                     String customer_name = inputForFile.getText().toString();
                     String customer_order = "Order #" + counter + "/nTotal: " + totalCost;
                     outputStream = openFileOutput(myfile, Context.MODE_PRIVATE);
                     outputStream.write(customer_order.getBytes());
                     outputStream.write(customer_name.getBytes());
-                    outputStream.close();
+                    outputStream.close(); */
 
                 }catch (Exception e){
                     e.printStackTrace();
