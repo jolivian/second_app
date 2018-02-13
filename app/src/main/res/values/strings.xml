@@ -10,6 +10,12 @@
     <string name="bTot">Price</string>
     <string name="output">output</string>
     <string name="command">command</string>
+    <string name="food">food</string>
+    <string name="add_column">Add</string>
+    <string name="sub_column">Sub</string>
+    <string name="burger_ingredients">Ingredients: ground beef</string>
+    <string name="chicken_ingredients">Ingredients: chicken</string>
+    <string name="fries_ingredients">Ingredients: Potatoes</string>
 
     <string name="friesDisplay">fries</string>
     <string name="fries">fries</string>

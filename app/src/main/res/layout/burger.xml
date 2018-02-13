@@ -6,7 +6,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.joe.second_app.Burger">
 
-    <!-- BURGER-->
+ <!-- Food item-->
+ <TextView
+     android:layout_width="120dp"
+     android:layout_height="wrap_content"
+     android:text="@string/food"
+     android:textSize="31dp"
+     android:layout_marginTop="0dp"
+     tools:layout_editor_absoluteX="8dp"
+     tools:layout_editor_absoluteY="45dp"/>
+
+ <!-- subtract item -->
+ <TextView
+     android:layout_width="120dp"
+     android:layout_height="wrap_content"
+     android:text="@string/sub_column"
+     android:textSize="31dp"
+     android:layout_marginTop="0dp"
+     android:layout_marginLeft="200dp"
+     tools:layout_editor_absoluteX="8dp"
+     tools:layout_editor_absoluteY="45dp"/>
+ <!-- add item-->
+ <TextView
+     android:layout_width="100dp"
+     android:layout_height="wrap_content"
+     android:text="@string/add_column"
+     android:textSize="31dp"
+     android:layout_marginTop="0dp"
+     android:layout_marginLeft="100dp"
+     tools:layout_editor_absoluteX="8dp"
+     tools:layout_editor_absoluteY="45dp"/>
+
+
+
+    <!-- BURGER*************************************-->
     <TextView
         android:id="@+id/burgerDisplay"
         android:layout_width="120dp"
@@ -45,10 +78,20 @@
         android:text="@string/burger"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="45dp" />
+ <!-- ingredients burger-->
+ <TextView
+     android:layout_width="1000dp"
+     android:layout_height="wrap_content"
+     android:text="@string/burger_ingredients"
+     android:textSize="20dp"
+     android:layout_marginTop="100dp"
+     android:layout_marginLeft="0dp"
+     tools:layout_editor_absoluteX="8dp"
+     tools:layout_editor_absoluteY="45dp"/>
 
 
 
-    <!-- CHICKEN-->
+    <!-- CHICKEN**************************************-->
     <TextView
         android:id="@+id/chickenDisplay"
         android:layout_width="120dp"
@@ -88,8 +131,19 @@
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="45dp" />
 
+ <!-- ingredients chicken-->
+ <TextView
+     android:layout_width="1000dp"
+     android:layout_height="wrap_content"
+     android:text="@string/chicken_ingredients"
+     android:textSize="20dp"
+     android:layout_marginTop="200dp"
+     android:layout_marginLeft="0dp"
+     tools:layout_editor_absoluteX="8dp"
+     tools:layout_editor_absoluteY="45dp"/>
 
-    <!-- FRIES-->
+
+    <!-- FRIES*****************************************-->
     <TextView
         android:id="@+id/friesDisplay"
         android:layout_width="120dp"
@@ -128,6 +182,16 @@
         android:text="@string/fries"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="45dp" />
+ <!-- ingredients fries-->
+ <TextView
+     android:layout_width="1000dp"
+     android:layout_height="wrap_content"
+     android:text="@string/fries_ingredients"
+     android:textSize="20dp"
+     android:layout_marginTop="300dp"
+     android:layout_marginLeft="0dp"
+     tools:layout_editor_absoluteX="8dp"
+     tools:layout_editor_absoluteY="45dp"/>
 
 <!-- output to file-->
     <EditText

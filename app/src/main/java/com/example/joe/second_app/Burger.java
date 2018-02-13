@@ -185,7 +185,7 @@ public class Burger extends Activity implements View.OnClickListener {
                 emailIntent.putExtra(Intent.EXTRA_CC, CC);
                 emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Your subject");
                 emailIntent.putExtra(Intent.EXTRA_TEXT, "Email message goes here"); */
-                Log.i("SendMailActivity", "Send Button Clicked.");
+               /* Log.i("SendMailActivity", "Send Button Clicked.");
 
                 String fromEmail = "joeamp7@gmail.com";
                 String fromPassword = "";
@@ -196,7 +196,7 @@ public class Burger extends Activity implements View.OnClickListener {
                 String emailSubject = "Test";
                 String emailBody = "Test";
                 new SendMailTask(Burger.this).execute(fromEmail,
-                        fromPassword, toEmailList, emailSubject, emailBody);
+                        fromPassword, toEmailList, emailSubject, emailBody);*/
 
                 try { //code in here may have problems keeps crashing.
                     /*
