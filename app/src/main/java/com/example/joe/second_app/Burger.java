@@ -90,7 +90,31 @@ public class Burger extends AppCompatActivity{
             }
         });
     }
+    class BackgroundTask extends AsyncTask<String, Void, Void> {
+        Socket s;
+        PrintWriter writer;
 
+        @Override
+        protected Void doInBackground(String... voids) {
+            try {
+                String message = voids[0];
+                s = new Socket("192.168.10.40", 6000);
+                writer = new PrintWriter(s.getOutputStream());
+                writer.write(message);
+                writer.flush();
+                writer.close();
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return null;
+
+
+        }
+
+
+    }
+}
 //    public void send_data(View view) {
 //        counter++;
 //        counter = counter > 99 ? counter : 1;
@@ -118,31 +142,7 @@ public class Burger extends AppCompatActivity{
 //
 //    }
 
-    class BackgroundTask extends AsyncTask<String, Void, Void> {
-        Socket s;
-        PrintWriter writer;
 
-        @Override
-        protected Void doInBackground(String... voids) {
-            try {
-                String message = voids[0];
-                s = new Socket("192.168.10.40", 6000);
-                writer = new PrintWriter(s.getOutputStream());
-                writer.write(message);
-                writer.flush();
-                writer.close();
-
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            return null;
-
-
-        }
-
-
-    }
-}
     //burger total
 //    @Override
 //    public void onClick(View view) {
